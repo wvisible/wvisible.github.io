@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>哆啦A梦Doraemon</title>
+  
+  <subtitle>So we beat on, boats against the current, borne back ceaselessly into the past.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://wvisible.github.io/"/>
+  <updated>2018-10-07T10:17:50.000Z</updated>
+  <id>https://wvisible.github.io/</id>
+  
+  <author>
+    <name>哆啦A梦Doraemon</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java 8 Lambda 指南</title>
+    <link href="https://wvisible.github.io/2018/10/07/Java-8-Lambda-%E6%8C%87%E5%8D%97/"/>
+    <id>https://wvisible.github.io/2018/10/07/Java-8-Lambda-指南/</id>
+    <published>2018-10-07T09:31:03.000Z</published>
+    <updated>2018-10-07T10:17:50.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>2014年3月，Java 8发布，Lambda表达式作为一个重要的特性。不过在 Android 中最先使用 Retrolambda 插件来使用 Lambda 表达式，随着 Android Studio 的更新，在3.0版本之后通过配置就可以使用 Java8 的所有特性。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;一、前言&quot;&gt;&lt;a href=&quot;#一、前言&quot; class=&quot;headerlink&quot; title=&quot;一、前言&quot;&gt;&lt;/a&gt;一、前言&lt;/h3&gt;&lt;p&gt;2014年3月，Java 8发布，Lambda表达式作为一个重要的特性。不过在 Android 中最先使用 Retrolam
+      
+    
+    </summary>
+    
+      <category term="Java8" scheme="https://wvisible.github.io/categories/Java8/"/>
+    
+    
+      <category term="Java8 Lambda" scheme="https://wvisible.github.io/tags/Java8-Lambda/"/>
+    
+      <category term="Lambda 原理" scheme="https://wvisible.github.io/tags/Lambda-%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+</feed>
