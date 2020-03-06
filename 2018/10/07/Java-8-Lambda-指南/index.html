@@ -20,18 +20,18 @@
     
     
     <meta name="keywords" content="Java8 Lambda,Lambda 原理">
-    <meta name="description" content="一、前言2014年3月，Java 8发布，Lambda表达式作为一个重要的特性。不过在 Android 中最先使用 Retrolambda 插件来使用 Lambda 表达式，随着 Android Studio 的更新，在3.0版本之后通过配置就可以使用 Java8 的所有特性。">
+    <meta name="description" content="一、前言2014年3月，Java 8发布，Lambda表达式作为一个重要的特性。不过在 Android 中最先使用 Retrolambda 插件来使用 Lambda 表达式，随着 Android Studio 的更新，在3.0版本之后通过配置就可以使用 Java8 的所有特性。 Volley 源码分析三部曲Volley 源码解析之网络请求Volley 源码解析之图片请求Volley 源码解析之缓存">
 <meta name="keywords" content="Java8 Lambda,Lambda 原理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 8 Lambda 指南">
 <meta property="og:url" content="https://wvisible.github.io/2018/10/07/Java-8-Lambda-指南/index.html">
 <meta property="og:site_name" content="哆啦A梦Doraemon">
-<meta property="og:description" content="一、前言2014年3月，Java 8发布，Lambda表达式作为一个重要的特性。不过在 Android 中最先使用 Retrolambda 插件来使用 Lambda 表达式，随着 Android Studio 的更新，在3.0版本之后通过配置就可以使用 Java8 的所有特性。">
+<meta property="og:description" content="一、前言2014年3月，Java 8发布，Lambda表达式作为一个重要的特性。不过在 Android 中最先使用 Retrolambda 插件来使用 Lambda 表达式，随着 Android Studio 的更新，在3.0版本之后通过配置就可以使用 Java8 的所有特性。 Volley 源码分析三部曲Volley 源码解析之网络请求Volley 源码解析之图片请求Volley 源码解析之缓存">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-06T07:56:25.965Z">
+<meta property="og:updated_time" content="2020-03-06T08:17:49.801Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java 8 Lambda 指南">
-<meta name="twitter:description" content="一、前言2014年3月，Java 8发布，Lambda表达式作为一个重要的特性。不过在 Android 中最先使用 Retrolambda 插件来使用 Lambda 表达式，随着 Android Studio 的更新，在3.0版本之后通过配置就可以使用 Java8 的所有特性。">
+<meta name="twitter:description" content="一、前言2014年3月，Java 8发布，Lambda表达式作为一个重要的特性。不过在 Android 中最先使用 Retrolambda 插件来使用 Lambda 表达式，随着 Android Studio 的更新，在3.0版本之后通过配置就可以使用 Java8 的所有特性。 Volley 源码分析三部曲Volley 源码解析之网络请求Volley 源码解析之图片请求Volley 源码解析之缓存">
     
         <link rel="alternate" type="application/atom+xml" title="哆啦A梦Doraemon" href="/atom.xml">
     
@@ -166,7 +166,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、前言</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">一、前言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一、简单使用"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">一、简单使用</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -192,14 +192,19 @@
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h3 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h3><p>2014年3月，Java 8发布，Lambda表达式作为一个重要的特性。不过在 Android 中最先使用 Retrolambda 插件来使用 Lambda 表达式，随着 Android Studio 的更新，在3.0版本之后通过配置就可以使用 Java8 的所有特性。</p>
-
+<p>Volley 源码分析三部曲<br><a href="https://juejin.im/post/5c1c58b35188251f1f320e70" target="_blank" rel="noopener">Volley 源码解析之网络请求</a><br><a href="https://juejin.im/post/5c1c84ade51d4535f05a192c" target="_blank" rel="noopener">Volley 源码解析之图片请求</a><br><a href="https://juejin.im/post/5c27a52de51d455fac46838d" target="_blank" rel="noopener">Volley 源码解析之缓存机制</a></p>
+<blockquote>
+<p>Volley 是 Google 推出的一款网络通信框架，非常适合数据量小、通信频繁的网络请求，支持并发、缓存和容易扩展、调试等；不过不太适合下载大文件、大量数据的网络请求，因为 Volley 在解析期间将响应放到内存中，我们可以使用okhttp或者系统提供的DownloadManager 来下载文件。</p>
+</blockquote>
+<h4 id="一、简单使用"><a href="#一、简单使用" class="headerlink" title="一、简单使用"></a>一、简单使用</h4><p>首先在工程引入volley的library：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    implementation <span class="string">'com.android.volley:volley:1.1.1'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         </div>
 
         <blockquote class="post-copyright">
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-03-06T07:56:25.965Z" itemprop="dateUpdated">2020-03-06 15:56:25</time>
+    最后更新时间：<time datetime="2020-03-06T08:17:49.801Z" itemprop="dateUpdated">2020-03-06 16:17:49</time>
 </span><br>
 
 
