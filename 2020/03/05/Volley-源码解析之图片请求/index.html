@@ -20,18 +20,18 @@
     
     
     <meta name="keywords" content="Volley">
-    <meta name="description" content="一、前言上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章Volley 源码解析之网络请求。Volley 不仅仅对请求网络数据作了良好的封装，还封装了对图片的加载等操作，虽然比不上，不过可以满足我们的日常使用，从学习者的角度看看是怎么封装的。123#### 二、简单使用1. 使用```ImageRequest```加载图片，用法跟请求网络的用法差不多，只是">
+    <meta name="description" content="一、前言上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章Volley 源码解析之网络请求。Volley 不仅仅对请求网络数据作了良好的封装，还封装了对图片的加载等操作，虽然比不上，不过可以满足我们的日常使用，从学习者的角度看看是怎么封装的。123上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章[Volley 源">
 <meta name="keywords" content="Volley">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Volley 源码解析之图片请求">
 <meta property="og:url" content="https://wvisible.github.io/2020/03/05/Volley-源码解析之图片请求/index.html">
 <meta property="og:site_name" content="哆啦A梦Doraemon">
-<meta property="og:description" content="一、前言上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章Volley 源码解析之网络请求。Volley 不仅仅对请求网络数据作了良好的封装，还封装了对图片的加载等操作，虽然比不上，不过可以满足我们的日常使用，从学习者的角度看看是怎么封装的。123#### 二、简单使用1. 使用```ImageRequest```加载图片，用法跟请求网络的用法差不多，只是">
+<meta property="og:description" content="一、前言上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章Volley 源码解析之网络请求。Volley 不仅仅对请求网络数据作了良好的封装，还封装了对图片的加载等操作，虽然比不上，不过可以满足我们的日常使用，从学习者的角度看看是怎么封装的。123上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章[Volley 源">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-06T07:35:48.392Z">
+<meta property="og:updated_time" content="2020-03-06T08:08:02.111Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Volley 源码解析之图片请求">
-<meta name="twitter:description" content="一、前言上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章Volley 源码解析之网络请求。Volley 不仅仅对请求网络数据作了良好的封装，还封装了对图片的加载等操作，虽然比不上，不过可以满足我们的日常使用，从学习者的角度看看是怎么封装的。123#### 二、简单使用1. 使用```ImageRequest```加载图片，用法跟请求网络的用法差不多，只是">
+<meta name="twitter:description" content="一、前言上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章Volley 源码解析之网络请求。Volley 不仅仅对请求网络数据作了良好的封装，还封装了对图片的加载等操作，虽然比不上，不过可以满足我们的日常使用，从学习者的角度看看是怎么封装的。123上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章[Volley 源">
     
         <link rel="alternate" type="application/atom+xml" title="哆啦A梦Doraemon" href="/atom.xml">
     
@@ -191,7 +191,7 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章<a href="https://juejin.im/post/5c1c58b35188251f1f320e70" target="_blank" rel="noopener">Volley 源码解析之网络请求</a>。Volley 不仅仅对请求网络数据作了良好的封装，还封装了对图片的加载等操作，虽然比不上<figure class="highlight plain"><figcaption><span>，不过可以满足我们的日常使用，从学习者的角度看看是怎么封装的。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 二、简单使用</span><br><span class="line">1. 使用```ImageRequest```加载图片，用法跟请求网络的用法差不多，只是构造request的参数不太一样：</span><br></pre></td></tr></table></figure></p>
+            <h4 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h4><p>上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章<a href="https://juejin.im/post/5c1c58b35188251f1f320e70" target="_blank" rel="noopener">Volley 源码解析之网络请求</a>。Volley 不仅仅对请求网络数据作了良好的封装，还封装了对图片的加载等操作，虽然比不上<figure class="highlight plain"><figcaption><span>，不过可以满足我们的日常使用，从学习者的角度看看是怎么封装的。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章[Volley 源码解析之网络请求](https://juejin.im/post/5c1c58b35188251f1f320e70)。Volley 不仅仅对请求网络数据作了良好的封装，还封装了对图片的加载等操作，虽然比不上```Glide```、```Fresco```，不过可以满足我们的日常使用，从学习者的角度看看是怎么封装的。</span><br><span class="line">#### 二、简单使用</span><br><span class="line">1. 使用```ImageRequest```加载图片，用法跟请求网络的用法差不多，只是构造request的参数不太一样：</span><br></pre></td></tr></table></figure></p>
 <pre><code> String imageUrl = &quot;https://pic1.zhimg.com/80/1a60ca062a1fe2f6d091cdd9749e9c68_hd.jpg&quot;;
  RequestQueue queue = Volley.newRequestQueue(this);
  ImageRequest imageRequest = new ImageRequest(imageUrl,
@@ -795,7 +795,7 @@ protected void drawableStateChanged() {
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2020-03-06T07:35:48.392Z" itemprop="dateUpdated">2020-03-06 15:35:48</time>
+    最后更新时间：<time datetime="2020-03-06T08:08:02.111Z" itemprop="dateUpdated">2020-03-06 16:08:02</time>
 </span><br>
 
 
