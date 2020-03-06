@@ -182,13 +182,8 @@
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        一、前言前面我们分析了12#### 二、 源码分析我们首先看看```Cache```这个缓存接口：
-public interface Cache {    //通过key获取指定请求的缓存实体    Entry get(String key);
-//存入指定的缓存实体
-void put(String key, Entry entry);
-
-//初始化缓存
-void initialize();...
+        一、前言前面我们分析了 Volley 的网络请求的相关流程以及图片加载的源码，如果没有看过的话可以阅读一下，接下来我们分析 Volley 的缓存，看看是怎么处理缓存超时、缓存更新以及缓存的整个流程，掌握 Volley 的缓存设计，对整个 Volley 的源码以及细节一个比较完整的认识。
+二、 源码分析我们首先看看 Cache 这个缓存接口：12345678910111213141516171...
     
 
         <a href="/2020/03/05/Volley-源码解析之缓存机制/" class="post-more waves-effect waves-button">
@@ -235,7 +230,7 @@ void initialize();...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        一、前言上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章Volley 源码解析之网络请求。Volley 不仅仅对请求网络数据作了良好的封装，还封装了对图片的加载等操作，虽然比不上，不过可以满足我们的日常使用，从学习者的角度看看是怎么封装的。123上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章[Volle...
+        一、前言上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上一篇文章Volley 源码解析之网络请求。Volley 不仅仅对请求网络数据作了良好的封装，还封装了对图片的加载等操作，虽然比不上 Glide、Fresco，不过可以满足我们的日常使用，从学习者的角度看看是怎么封装的。上篇文章我们分析了网络请求，这篇文章分析对图片的处理操作，如果没看上一篇，可以先看上...
     
 
         <a href="/2020/03/05/Volley-源码解析之图片请求/" class="post-more waves-effect waves-button">
@@ -282,9 +277,9 @@ void initialize();...
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        Volley 源码分析三部曲Volley 源码解析之网络请求Volley 源码解析之图片请求Volley 源码解析之缓存机制
+        Volley源码分析三部曲Volley 源码解析之网络请求Volley 源码解析之图片请求Volley 源码解析之缓存机制
 
-Volley 是 Google 推出的一款网络通信框架，非常适合数据量小、通信频繁的网络请求，支持并发、缓存和容易扩展、调试等；不过不太适合下载大文件、大量数据的网络请求，因为 Volley 在解析期间将响应放到内存中，我们可以使用okhttp或者系统提供的Down...
+Volley 是 Google 推出的一款网络通信框架，非常适合数据量小、通信频繁的网络请求，支持并发、缓存和容易扩展、调试等；不过不太适合下载大文件、大量数据的网络请求，因为 Volley 在解析期间将响应放到内存中，我们可以使用 Okhttp 或者系统提供的Dow...
     
 
         <a href="/2020/03/05/Volley-源码解析之网络请求/" class="post-more waves-effect waves-button">
